@@ -1,0 +1,90 @@
+---
+layout: default
+---
+<div class="page-header">
+  <div class="page-header--fixed">
+    <div class="title-intro">
+      <h1 class="title-intro--text">. Front-end . 42 .</h1>
+      <span class="quote-intro">"If it ain't fun, don't do it."</span>
+    </div>
+    <img src="assets/img/night-stars.jpg" alt="">
+  </div>
+</div>
+<div class="home content relative">
+  <div class="box box-social">
+    <div class="container">
+      <div class="row">
+        <div class="box-social--network facebook">
+          <a href="http://www.facebook.com.br/rafaelnogueira1" target="blank" title="Acompanhe meu perfil no Facebook">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="box-social--network twitter">
+          <a href="http://www.twitter.com/rafaelnogueira" target="blank" title="Siga meus posts no Twitter">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="box-social--network instagram">
+          <a href="http://www.instagram.com/ranosi" target="blank" title="Veja minhas fotos no Instagram">
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="box-social--network codepen">
+          <a href="http://www.codepen.io/ranosi" target="blank" title="Veja meus experimentos no Codepen">
+            <i class="fa fa-codepen" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="box-social--network github">
+          <a href="http://www.github.com/ranosi" target="blank" title="Veja meus projetos no Github">
+            <i class="fa fa-github" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="box-social--network spotify">
+          <a href="https://open.spotify.com/user/rafaelnogueira1" target="blank" title="Acompanhe o que estou ouvindo no Spotify">
+            <i class="fa fa-spotify" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+      <hr class="line">
+    </div>
+  </div>
+  <div class="box box-color-alt box-jobs">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-8 col-md-offset-2">
+          <h1 class="title-post">Olá, tudo bem?</h1>
+          <p>
+            Me chamo <span class="text-featured">Rafael</span> e sou um desenvolvedor front-end vivendo atualmente na terra da cerveja, Blumenau/SC. <br>
+            Além de desenvolvimento de sistemas e sites também cultivo grande interesse em marketing digital e técnicas de SEO.
+          </p>
+          <p>
+            Faço parte do time da <a class="text-featured text-featured--link" href="http://www.bindendigital.com.br" title="Binden Digital - E-commerce e Marketing Digital" target="_blank">Binden Digital</a> onde sou responsável pela arquitetura e criação de sites institucionais e e-commerce B2B, B2C e Marketplaces.
+          </p>
+          <p>
+            Para o lazer e colocar os pensamentos em ordem uma boa trilha/camping, filmes e livros fazem um bom trabalho na hora de relaxar. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="line-alt">
+  <div class="box box-articles">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-8 col-md-offset-2">
+          {{ content }}
+          <ul class="post-list">
+            {% for post in site.posts %}
+              <li>
+                <h1 class="title-post">
+                  <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+                  <a class="title-post--link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                </h1>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

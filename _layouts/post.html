@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<div class="page-header--no-image">
+  <div class="page-header--fixed">
+    <h1 class="title-page title-intro--text">{{ page.title | escape }}</h1>
+  </div>
+</div>
+<article class="post content relative" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-8 col-md-offset-2">
+        <div class="post-content" itemprop="articleBody">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-6 col-md-offset-3">
+        {% if site.disqus.shortname %}
+          {% include disqus_comments.html %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</article>
