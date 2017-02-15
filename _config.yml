@@ -17,7 +17,7 @@ title: Ranosi
 subtitle: "| Desenvolvimento Front-end e lifehackers!"
 email: rafael.nogueira@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Desenvolvedor Front-end. Site pessoal para informações de projetos, noticias e dicas sobre desenvolvimento e arquitetura de sites. Marketing Digitial e SEO.
+  Desenvolvedor Front-end. Site pessoal para informações de projetos, noticias e dicas sobre desenvolvimento, marketing digital lifehacks.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: /:title.html
