@@ -11,7 +11,9 @@ Um problema que vez por outra ocorre comigo, é o Spotify abrir em modo fullscre
 
 Segue uma solução bem simples para esse problema no **Ubuntu Linux**. 
 
-Com o **Spotify** fechado acesse a pasta <span class="text-featured">~/.config/spotify/window_position.prefs</span> e delete o arquivo <span class="text-featured">window_position.prefs</span>.
+Com o **Spotify** fechado delete o arquivo <span class="text-featured">window_position.prefs</span> que está na pasta <span class="text-featured">~/.config/spotify/</span>.
+
+Pode ser que na sua distro este arquivo possua outro nome, assim como aconteceu na minha instalação do Deepin onde o arquivo se chamava <span class="text-featured">prefs</span>.
 
 Após isso abra novamente seu Spotify e pronto, tudo funcionando corretamente.
 
@@ -21,18 +23,16 @@ Um jeito ainda melhor de fazer isso é criar um *alias* que acesse a pasta e apa
 `$ sudo nano ~/.bashrc`
 
 **Adicione essa função**<br>
-```function fixSpotify () {  
-sudo killall spotify && echo "Spotify Killed" && \
-sudo rm ~/.config/spotify/window_position.prefs && echo "Window preferences deleted" && \
-sudo apt moo
+```function fixspotify () {  
+sudo killall spotify && echo "Spotify Killed" && sudo rm ~/.config/spotify/window_position.prefs && echo "Window preferences deleted"
 }```
 
 **Grave as informações no bash**<br>
 `$ source ~/.bashrc`
 
 **Quando o problema aparecer novamente execute no temrinal**<br>
-`$ fixSpotify`
+`$ fixspotify`
 
-Não se preocupe pois nenhuma informação sua será perdida nesse processo, ok!
+Não se preocupe pois nenhuma informação importante será perdida nesse processo, ok!
 
 E caso queira acompanhar minhas playlists, fique a vontade para ver meu <a class="text-featured text-featured--link" href="https://open.spotify.com/user/rafaelnogueira1" target="_blank" title="Siga meu perfil no Spotify">perfil no Spotify</a>.
