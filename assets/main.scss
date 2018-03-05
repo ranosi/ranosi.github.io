@@ -1,6 +1,3 @@
----
-# Only the main Sass file needs front matter (the dashes are enough)
----
 @charset "utf-8";
 @import "ranosi";
 @import "css/font-awesome.min.css";
@@ -59,7 +56,7 @@ a.site-title:hover{ text-decoration: none;}
     }
 }
 .page-header--no-image{
-    height: 95px;
+    height: 160px;
     border-bottom: 10px solid #333;
 }
 .page-header--fixed{
@@ -96,7 +93,7 @@ a.site-title:hover{ text-decoration: none;}
     color:#1d1c1c;
 }
 .title-page{
-    padding-top: 15px;
+    padding-top: 30px;
 }
 .title-post{
     font: 34px 'Roboto Slab', serif;
