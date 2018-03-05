@@ -1,52 +1,210 @@
-/*
-Error: File to import not found or unreadable: ranosi.
-        on line 2 of assets/main.scss
+@charset "utf-8";
+@import "ranosi";
+@import "css/font-awesome.min.css";
+@import "css/flexboxgrid.min.css";
+.roboto{ font-family: 'Roboto Slab', serif; }
+.raleway{ font-family: 'Raleway', sans-serif; }
+.oregano{ font-family: 'Oregano', cursive; }
 
-1: @charset "utf-8";
-2: @import "ranosi";
-3: @import "css/font-awesome.min.css";
-4: @import "css/flexboxgrid.min.css";
-5: .roboto{ font-family: 'Roboto Slab', serif; }
-6: .raleway{ font-family: 'Raleway', sans-serif; }
-7: .oregano{ font-family: 'Oregano', cursive; }
+body{
+    font: 16px/2 'Raleway', sans-serif;
+    color: #333;
+}
+a,
+a:visited{ 
+    color: #FF6400; 
+    cursor: pointer;
+}
+h2{
+    font: 2em 'Roboto Slab', serif;
+}
+.text-featured{
+    color: #FF6400;
+}
+.text-featured--link{
+    border-bottom: 1px solid #666;
+}
+.text-featured:hover{
+    text-decoration: none;
+    border-bottom: 1px dashed #FF6400;
+    background-color: #f5f5f5;
+}
+a.site-title{
+    color:#fff;
+    font:20px 'Roboto Slab', serif;
+    text-transform: uppercase;
+    position: relative;
+    z-index:2;
+}
+a.site-title:hover{ text-decoration: none;}
+.site-header{
+    position: fixed;
+    top: 10px;
+    z-index: 3;
+    height: 30px;
+    left: 70px;
+}
+.page-header{
+	min-height: 650px;
+	background-color: #333;
+	position: relative;
+	z-index: 1;
+}
+@media screen and (min-height: 900px) {
+    .page-header {
+        min-height: 990px;
+    }
+}
+.page-header--no-image{
+    height: 160px;
+    border-bottom: 10px solid #333;
+}
+.page-header--fixed{
+    background-color: #1d1c1c;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.page-header--fixed img{
+    opacity: .4;
+}
+.title-intro{
+    text-align: center;
+    position: absolute;
+    z-index: 2;
+    top: 40%;
+    bottom: 50%;
+    left: 0;
+    right: 0;
+}
+.title-intro--text{
+    font: 50px 'Roboto Slab', serif;
+    color: #fff;
+    text-align: center;
+}
+.quote-intro{
+    font: 100px 'Oregano', cursive;
+    color:#1d1c1c;
+}
+.title-page{
+    padding-top: 30px;
+}
+.title-post{
+    font: 34px 'Roboto Slab', serif;
+    text-transform: lowercase;
+}
+.title-post,
+.title-post--link,
+.title-post--link:visited{
+    color: #333;
+}
+.title-post .fa{
+    font-size: 14px;
+}
+.content{
+    background: #fff;
+    padding-top: 20px;
+}
+.content p{
+    font-size: 20px;
+}
+/** 
+# Footer **/
+.site-footer{
+    background: #333;
+    border-top: 4px solid #666;
+}
+.footer-note{
+    font: 12px 'Roboto Slab', serif;
+    color: #666;
+}
+.footer-note:last-child{
+    text-align: right;
+}
 
-Backtrace:
-assets/main.scss:2
-/var/lib/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/import_node.rb:67:in `rescue in import'
-/var/lib/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/import_node.rb:45:in `import'
-/var/lib/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/import_node.rb:28:in `imported_file'
-/var/lib/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/import_node.rb:37:in `css_import?'
-/var/lib/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/visitors/perform.rb:314:in `visit_import'
-/var/lib/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/var/lib/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/var/lib/gems/2.3.0/gems/sass-3.5.4/lib/sass/stack.rb:79:in `block in with_base'
-/var/lib/gems/2.3.0/gems/sass-3.5.4/lib/sass/stack.rb:135:in `with_frame'
-/var/lib/gems/2.3.0/gems/sass-3.5.4/lib/sass/stack.rb:79:in `with_base'
-/var/lib/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/var/lib/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/var/lib/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/visitors/base.rb:52:in `map'
-/var/lib/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/var/lib/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-/var/lib/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/var/lib/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-/var/lib/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/var/lib/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
-/var/lib/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/var/lib/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/visitors/perform.rb:161:in `visit'
-/var/lib/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/visitors/perform.rb:10:in `visit'
-/var/lib/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/root_node.rb:36:in `css_tree'
-/var/lib/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/var/lib/gems/2.3.0/gems/sass-3.5.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-/var/lib/gems/2.3.0/gems/sass-3.5.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
-/var/lib/gems/2.3.0/gems/sass-3.5.4/lib/sass/exec/sass_scss.rb:391:in `run'
-/var/lib/gems/2.3.0/gems/sass-3.5.4/lib/sass/exec/sass_scss.rb:63:in `process_result'
-/var/lib/gems/2.3.0/gems/sass-3.5.4/lib/sass/exec/base.rb:52:in `parse'
-/var/lib/gems/2.3.0/gems/sass-3.5.4/lib/sass/exec/base.rb:19:in `parse!'
-/var/lib/gems/2.3.0/gems/sass-3.5.4/bin/sass:13:in `<top (required)>'
-/usr/local/bin/sass:23:in `load'
-/usr/local/bin/sass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: File to import not found or unreadable: ranosi.\A         on line 2 of assets/main.scss\A \A 1: @charset \"utf-8\";\A 2: @import \"ranosi\";\A 3: @import \"css/font-awesome.min.css\";\A 4: @import \"css/flexboxgrid.min.css\";\A 5: .roboto{ font-family: 'Roboto Slab', serif; }\A 6: .raleway{ font-family: 'Raleway', sans-serif; }\A 7: .oregano{ font-family: 'Oregano', cursive; }"; }
+/** 
+# Content **/
+.box{
+    padding: 20px 0;
+}
+.box-color-alt{
+    background: #fdfdfd;
+}
+.relative{
+    position: relative;
+    z-index: 3;
+}
+.line{
+    width: 40%;
+    height: 1px;
+    color: #FF6400;
+    background: #FF6400;
+    border: none;
+    margin: 25px auto 0;
+}
+.line-alt{
+    width: 45%;
+    height: 2px;
+    color: #fff;
+    background: #fff;
+    border: none;
+    margin: 15px auto 0;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+.original-font{
+    font-size: 16px;
+}
+/** 
+# Social box **/
+.box-social--network{
+    border-top: 3px solid #fff;
+    text-align: center;
+    font-size: 10px;
+    text-transform: uppercase;
+    padding: 10px 5px 5px;
+    margin: 1%;
+    display: inline-block;
+    width: 13%;
+    color: #000;
+}
+.box-social--network a{
+    display: block;
+    width: 100%;
+    cursor: pointer;
+}
+.box-social--network a:hover{
+    color: #333;
+}
+.box-social--network .fa{
+    font-size: 54px;
+}
+.facebook a{ color: #3b5998; }
+.twitter a{ color: #1da1f2; }
+.instagram a{ color: #f56040; }
+.codepen a{ color: #47cf73; }
+.github a{ color: #333; }
+.spotify a{ color: #2ebd59; }
+.facebook:hover{ border-color: #3b5998; }
+.twitter:hover{ border-color: #1da1f2; }
+.instagram:hover{ border-color: #f56040; }
+.codepen:hover{ border-color: #47cf73; }
+.github:hover{ border-color: #333; }
+.spotify:hover{ border-color: #2ebd59; }
+
+/** 
+# Posts **/
+.post-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.post-list li{
+    margin: 0 0 10px;
+}
